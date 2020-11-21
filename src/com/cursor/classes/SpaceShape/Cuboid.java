@@ -32,8 +32,8 @@ public class Cuboid extends SpaceShape {
                 "vertices: {x = " + vertices.get(0) +
                 ", y = " + vertices.get(1) +
                 ", z = " + vertices.get(2) +
-                "} area = " + getArea() +
-                " volume = " + getVolume() +
+                "}, area = " + getArea() +
+                ", volume = " + getVolume() +
                 '}';
     }
 }

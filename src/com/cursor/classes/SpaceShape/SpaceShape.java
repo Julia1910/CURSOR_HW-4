@@ -5,7 +5,7 @@ import com.cursor.classes.Shape;
 
 import java.util.List;
 
-abstract class SpaceShape extends Shape implements AreaMeasurable, VolumeMeasurable {
+public abstract class SpaceShape extends Shape implements AreaMeasurable, VolumeMeasurable {
     private List<Double> vertices;
 
 
@@ -27,9 +27,11 @@ abstract class SpaceShape extends Shape implements AreaMeasurable, VolumeMeasura
     @Override
     public String toString() {
         return "SpaceShape{" +
-                "vertices: x = " + vertices.get(0) +
+                "vertices: {x = " + vertices.get(0) +
                 ", y = " + vertices.get(1) +
                 ", z = " + vertices.get(2) +
+                "}, area = " + getArea() +
+                ", volume = " + getVolume() +
                 '}';
     }
 }

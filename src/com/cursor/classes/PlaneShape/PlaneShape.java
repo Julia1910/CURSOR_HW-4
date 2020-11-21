@@ -5,7 +5,7 @@ import com.cursor.classes.Shape;
 
 import java.util.List;
 
-abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeasurable {
+public abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeasurable {
     List<Double> vertices;
 
 
@@ -18,7 +18,7 @@ abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeas
         return vertices;
     }
 
-    private double getDistance(PlaneShape shape) {
+    public double getDistance(PlaneShape shape) {
         return Math.sqrt(Math.pow(vertices.get(0) - shape.getVertices().get(0), 2) +
                 Math.pow(vertices.get(1) - shape.getVertices().get(1), 2));
     }
