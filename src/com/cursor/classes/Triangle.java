@@ -31,4 +31,14 @@ public class Triangle extends PlaneShape {
         return x + y + z;
     }
 
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "vertices: {x = " + vertices.get(0) +
+                ", y = " + vertices.get(1) +
+                "}, perimeter = " + getPerimeter() +
+                ", area = " + getArea() +
+                '}';
+    }
+
 }

@@ -19,6 +19,13 @@ abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeas
                 Math.pow(vertices.get(1) - shape.getVertices().get(1), 2));
     }
 
+    @Override
+    public String toString() {
+        return "PlaneShape{" +
+                "vertices: x = " + vertices.get(0) +
+                ", y = " + vertices.get(1) +
+                '}';
+    }
 
     @Override
     public double getArea() {
@@ -29,4 +36,6 @@ abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeas
     public double getPerimeter() {
         return 0;
     }
+
+
 }
