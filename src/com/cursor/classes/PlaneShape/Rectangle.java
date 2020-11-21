@@ -1,44 +1,42 @@
-package com.cursor.classes;
+package com.cursor.classes.PlaneShape;
 
 import java.util.List;
 
-public class Triangle extends PlaneShape {
+public class Rectangle extends PlaneShape {
     private List<Double> vertices;
-    private double x;
-    private double y;
-    private double z;
+    private double width;
+    private double height;
 
-    public Triangle(List<Double> vertices, double x, double y, double z) {
+
+    public Rectangle(List<Double> vertices, double width, double height) {
         super(vertices);
         this.vertices = vertices;
-        this.x = x;
-        this.y = y;
-        this.z = z;
+        this.width = width;
+        this.height = height;
     }
 
+    @Override
     public List<Double> getVertices() {
         return vertices;
     }
 
     @Override
     public double getArea() {
-        double p = getPerimeter() / 2;
-        return Math.sqrt(p * (p - x) * (p - y) * (p - z));
+        return width * height;
     }
 
     @Override
     public double getPerimeter() {
-        return x + y + z;
+        return 2 * (width + height);
     }
 
     @Override
     public String toString() {
-        return "Triangle{" +
+        return "Rectangle{" +
                 "vertices: {x = " + vertices.get(0) +
                 ", y = " + vertices.get(1) +
                 "}, perimeter = " + getPerimeter() +
                 ", area = " + getArea() +
                 '}';
     }
-
 }

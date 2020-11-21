@@ -1,4 +1,7 @@
-package com.cursor.classes;
+package com.cursor.classes.PlaneShape;
+
+import com.cursor.classes.AreaMeasurable;
+import com.cursor.classes.Shape;
 
 import java.util.List;
 
@@ -8,6 +11,7 @@ abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeas
 
     public PlaneShape(List<Double> vertices) {
         super(vertices);
+        this.vertices = vertices;
     }
 
     public List<Double> getVertices() {

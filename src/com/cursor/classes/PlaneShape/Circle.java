@@ -1,4 +1,4 @@
-package com.cursor.classes;
+package com.cursor.classes.PlaneShape;
 
 import java.util.List;
 
