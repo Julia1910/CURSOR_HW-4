@@ -1,9 +1,9 @@
 package com.cursor;
 
 
-import com.cursor.classes.PlaneShape.*;
-import com.cursor.classes.Shape;
-import com.cursor.classes.SpaceShape.*;
+import com.cursor.geomery.PlaneShape.*;
+import com.cursor.geomery.Shape;
+import com.cursor.geomery.SpaceShape.*;
 
 import java.util.ArrayList;
 import java.util.List;
