@@ -1,6 +1,6 @@
 package com.cursor.shop;
 
-public class Appliance extends ElectronicsProduct{
+public class Appliance extends ElectronicsProduct {
 
 
     public Appliance(String name, double price, int quantity, AgeRestriction ageRestriction) {
@@ -10,7 +10,7 @@ public class Appliance extends ElectronicsProduct{
     @Override
     public double getPrice() {
         if (super.getQuantity() < 50) {
-            return super.getPrice()*1.05;
+            return super.getPrice() * 1.05;
         }
         return super.getPrice();
     }
@@ -53,5 +53,16 @@ public class Appliance extends ElectronicsProduct{
     @Override
     public void setAgeRestriction(AgeRestriction ageRestriction) {
         super.setAgeRestriction(ageRestriction);
+    }
+
+    @Override
+    public String toString() {
+        return "Appliance{" +
+                "name='" + getName() +
+                ", price=" + getPrice() +
+                ", quantity=" + getQuantity() +
+                ", ageRestriction=" + getAgeRestriction() +
+                "guaranteePeriod=" + getGuaranteePeriod() +
+                '}';
     }
 }

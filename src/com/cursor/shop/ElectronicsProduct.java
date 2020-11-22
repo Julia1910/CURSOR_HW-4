@@ -1,6 +1,6 @@
 package com.cursor.shop;
 
-public abstract class ElectronicsProduct extends Product{
+public abstract class ElectronicsProduct extends Product {
     private int guaranteePeriod;
 
     public ElectronicsProduct(String name, double price, int quantity, AgeRestriction ageRestriction, int guaranteePeriod) {
@@ -50,5 +50,16 @@ public abstract class ElectronicsProduct extends Product{
     @Override
     public double getPrice() {
         return super.getPrice();
+    }
+
+    @Override
+    public String toString() {
+        return "ElectronicsProduct{" +
+                "name='" + getName() +
+                ", price=" + getPrice() +
+                ", quantity=" + getQuantity() +
+                ", ageRestriction=" + getAgeRestriction() +
+                "guaranteePeriod=" + guaranteePeriod +
+                '}';
     }
 }

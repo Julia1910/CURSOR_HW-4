@@ -16,6 +16,6 @@ public class PurchaseManager {
         }
         product.setQuantity(product.getQuantity() - 1);
         customer.setBalance(customer.getBalance() - product.getPrice());
-        System.out.println("Purchase completed successfully");
+        System.out.println("Congratulations! Purchase completed successfully!");
     }
 }

@@ -10,7 +10,7 @@ public class Computer extends ElectronicsProduct {
     @Override
     public double getPrice() {
         if (super.getQuantity() > 1000) {
-            return super.getPrice()*0.95;
+            return super.getPrice() * 0.95;
         }
         return super.getPrice();
     }
@@ -53,5 +53,16 @@ public class Computer extends ElectronicsProduct {
     @Override
     public void setAgeRestriction(AgeRestriction ageRestriction) {
         super.setAgeRestriction(ageRestriction);
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "name='" + getName() +
+                ", price=" + getPrice() +
+                ", quantity=" + getQuantity() +
+                ", ageRestriction=" + getAgeRestriction() +
+                "guaranteePeriod=" + getGuaranteePeriod() +
+                '}';
     }
 }
