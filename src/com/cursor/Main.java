@@ -99,12 +99,13 @@ public class Main {
         products.stream()
                 .filter(product -> product.getAgeRestriction() == AgeRestriction.ADULT)
                 .sorted(Comparator.comparing(Product::getPrice))
-                .map(product -> product.getName() + " " + product.getPrice())
+                .map(product -> product.getName() + ", " + product.getPrice())
                 .forEach(System.out::println);
+        System.out.println();
 
 
         date = sdf.parse("27/10/2020");
         FoodProduct bananas = new FoodProduct("Baby Bananas", 3.2, 40, AgeRestriction.NONE, date);
-
+        System.out.println(bananas.toString());
     }
 }
