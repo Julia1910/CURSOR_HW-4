@@ -3,21 +3,19 @@ package com.cursor.geomery.PlaneShape;
 import java.util.List;
 
 public class Rectangle extends PlaneShape {
-    private List<Double> vertices;
     private double width;
     private double height;
 
 
     public Rectangle(List<Double> vertices, double width, double height) {
         super(vertices);
-        this.vertices = vertices;
         this.width = width;
         this.height = height;
     }
 
     @Override
     public List<Double> getVertices() {
-        return vertices;
+        return super.getVertices();
     }
 
     @Override
@@ -33,8 +31,8 @@ public class Rectangle extends PlaneShape {
     @Override
     public String toString() {
         return "Rectangle{" +
-                "vertices: {x = " + vertices.get(0) +
-                ", y = " + vertices.get(1) +
+                "vertices: {x = " + getVertices().get(0) +
+                ", y = " + getVertices().get(1) +
                 "}, perimeter = " + getPerimeter() +
                 ", area = " + getArea() +
                 '}';

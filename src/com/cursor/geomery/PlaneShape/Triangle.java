@@ -3,21 +3,19 @@ package com.cursor.geomery.PlaneShape;
 import java.util.List;
 
 public class Triangle extends PlaneShape {
-    private List<Double> vertices;
     private double x;
     private double y;
     private double z;
 
     public Triangle(List<Double> vertices, double x, double y, double z) {
         super(vertices);
-        this.vertices = vertices;
         this.x = x;
         this.y = y;
         this.z = z;
     }
 
     public List<Double> getVertices() {
-        return vertices;
+        return super.getVertices();
     }
 
     @Override
@@ -34,8 +32,8 @@ public class Triangle extends PlaneShape {
     @Override
     public String toString() {
         return "Triangle{" +
-                "vertices: {x = " + vertices.get(0) +
-                ", y = " + vertices.get(1) +
+                "vertices: {x = " + getVertices().get(0) +
+                ", y = " + getVertices().get(1) +
                 "}, perimeter = " + getPerimeter() +
                 ", area = " + getArea() +
                 '}';

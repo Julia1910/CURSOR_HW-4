@@ -6,28 +6,27 @@ import com.cursor.geomery.Shape;
 import java.util.List;
 
 public abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeasurable {
-    List<Double> vertices;
 
 
     public PlaneShape(List<Double> vertices) {
         super(vertices);
-        this.vertices = vertices;
     }
 
+    @Override
     public List<Double> getVertices() {
-        return vertices;
+        return super.getVertices();
     }
 
     public double getDistance(PlaneShape shape) {
-        return Math.sqrt(Math.pow(vertices.get(0) - shape.getVertices().get(0), 2) +
-                Math.pow(vertices.get(1) - shape.getVertices().get(1), 2));
+        return Math.sqrt(Math.pow(super.getVertices().get(0) - shape.getVertices().get(0), 2) +
+                Math.pow(super.getVertices().get(1) - shape.getVertices().get(1), 2));
     }
 
     @Override
     public String toString() {
         return "PlaneShape{" +
-                "vertices: x = " + vertices.get(0) +
-                ", y = " + vertices.get(1) +
+                "vertices: x = " + super.getVertices().get(0) +
+                ", y = " + super.getVertices().get(1) +
                 '}';
     }
 
@@ -40,6 +39,5 @@ public abstract class PlaneShape extends Shape implements PerimeterMeasurable, A
     public double getPerimeter() {
         return 0;
     }
-
 
 }

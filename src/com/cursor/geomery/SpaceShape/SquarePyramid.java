@@ -3,15 +3,18 @@ package com.cursor.geomery.SpaceShape;
 import java.util.List;
 
 public class SquarePyramid extends SpaceShape {
-    private List<Double> vertices;
     private double baseWidth;
     private double pyramidHeight;
 
     public SquarePyramid(List<Double> vertices, double baseWidth, double pyramidHeight) {
         super(vertices);
-        this.vertices = vertices;
         this.baseWidth = baseWidth;
         this.pyramidHeight = pyramidHeight;
+    }
+
+    @Override
+    public List<Double> getVertices() {
+        return super.getVertices();
     }
 
     @Override
@@ -28,9 +31,9 @@ public class SquarePyramid extends SpaceShape {
     @Override
     public String toString() {
         return "SquarePyramid{" +
-                "vertices: {x = " + vertices.get(0) +
-                ", y = " + vertices.get(1) +
-                ", z = " + vertices.get(2) +
+                "vertices: {x = " + getVertices().get(0) +
+                ", y = " + getVertices().get(1) +
+                ", z = " + getVertices().get(2) +
                 "}, area = " + getArea() +
                 ", volume = " + getVolume() +
                 '}';

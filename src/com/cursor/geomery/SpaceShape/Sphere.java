@@ -3,13 +3,16 @@ package com.cursor.geomery.SpaceShape;
 import java.util.List;
 
 public class Sphere extends SpaceShape {
-    private List<Double> vertices;
     private double radius;
 
     public Sphere(List<Double> vertices, double radius) {
         super(vertices);
-        this.vertices = vertices;
         this.radius = radius;
+    }
+
+    @Override
+    public List<Double> getVertices() {
+        return super.getVertices();
     }
 
     @Override
@@ -25,9 +28,9 @@ public class Sphere extends SpaceShape {
     @Override
     public String toString() {
         return "Sphere{" +
-                "vertices: {x = " + vertices.get(0) +
-                ", y = " + vertices.get(1) +
-                ", z = " + vertices.get(2) +
+                "vertices: {x = " + getVertices().get(0) +
+                ", y = " + getVertices().get(1) +
+                ", z = " + getVertices().get(2) +
                 "}, area = " + getArea() +
                 ", volume = " + getVolume() +
                 '}';
