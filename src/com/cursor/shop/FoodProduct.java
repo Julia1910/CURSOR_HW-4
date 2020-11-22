@@ -1,8 +1,9 @@
 package com.cursor.shop;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
-public class FoodProduct extends Product implements Expirable{
+public class FoodProduct extends Product implements Expirable {
     private Date expirationDate;
 
 
@@ -12,7 +13,7 @@ public class FoodProduct extends Product implements Expirable{
         if (expirationDate.after(date)) {
             this.expirationDate = expirationDate;
         } else {
-            throw new IllegalArgumentException("You can't add product with expiration date before today");
+            throw new IllegalArgumentException("You cannot add a product with an unusable expiration date");
         }
     }
 
@@ -53,10 +54,12 @@ public class FoodProduct extends Product implements Expirable{
 
     @Override
     public double getPrice() {
-       /* Date date = new Date();
-        if((date.getDate()-getExpirationDate().getDate())<15) {
+        Date date = new Date();
+        long diffInMilliS = Math.abs(getExpirationDate().getTime() - date.getTime());
+        long difference = TimeUnit.DAYS.convert(diffInMilliS, TimeUnit.MILLISECONDS);
+        if (difference < 15) {
             return super.getPrice() * 0.7;
-        }*/
+        }
         return super.getPrice();
     }
 
