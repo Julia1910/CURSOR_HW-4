@@ -13,7 +13,7 @@ public class FoodProduct extends Product implements Expirable {
         if (expirationDate.after(date)) {
             this.expirationDate = expirationDate;
         } else {
-            throw new IllegalArgumentException("You cannot add a product with an unusable expiration date");
+            System.out.println("You can't add a product with an unusable expiration date!");
         }
     }
 

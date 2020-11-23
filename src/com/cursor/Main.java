@@ -106,6 +106,5 @@ public class Main {
 
         date = sdf.parse("27/10/2020");
         FoodProduct bananas = new FoodProduct("Baby Bananas", 3.2, 40, AgeRestriction.NONE, date);
-        System.out.println(bananas.toString());
     }
 }
